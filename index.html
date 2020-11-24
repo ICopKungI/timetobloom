@@ -30,7 +30,7 @@
 
     <div id="app">
 
-        <!---โหลดGif--->
+        <!---โหลด--->
         <img src="Architecture/solve/flower/Whiteflowers/Whiteflowers1.gif" id="load0" style="display: none;">
         <img src="Architecture/solve/flower/Purpleflowers/Purpleflowers1.gif" id="load1" style="display: none;">
         <img src="Architecture/solve/flower/Pinkflowers/Pinkflowers1.gif" id="load2" style="display: none;">
@@ -42,7 +42,13 @@
         <video src="Architecture/solve/homepage/Waterdrop1.mp4" autoplay muted id="load8" style="display: none;"></video>
         <video src="Architecture/solve/homepage/Frame3.mp4" autoplay muted id="load9" style="display: none;"></video>
         <video src="Architecture/solve/law/Election.mp4" autoplay muted id="load10" style="display: none;"></video>
-        <!---โหลดGif--->
+        <video src="Architecture/solve/law/Maternity leave1.mp4" autoplay muted id="load11" style="display: none;"></video>
+        <video src="Architecture/solve/draftlaw/Freeabortionlaw2.mp4" autoplay muted id="load12" style="display: none;"></video>
+        <video src="Architecture/solve/draftlaw/Married with children 1.mp4" autoplay muted id="load13" style="display: none;"></video>
+        <video src="Architecture/solve/draftlaw/Safe city laws for women.mp4" autoplay muted id="load14" style="display: none;"></video>
+        <video src="Architecture/solve/draftlaw/Dress law in various professions.mp4" autoplay muted id="load15" style="display: none;"></video>
+        <video src="Architecture/solve/draftlaw/prostitute.mp4" autoplay muted id="load16" style="display: none;"></video>
+        <!---โหลด--->
         <!-- หน้าก่อนเข้าหน้า Home -->
         <div v-if="what_page == 'Before_Time_To_Bloom'">
             <video src="Architecture/Page_before entering_home page/time to bloom.mp4" autoplay muted style="margin: 0;" id="before"> </video>
@@ -496,10 +502,10 @@
         }
     }, 500);
     setTimeout(function() {
-        for (let index = 0; index < 10; index++) {
+        for (let index = 0; index < 16; index++) {
             document.getElementById("load_gif" + index).remove();
         }
-    }, 6000);
+    }, 8000);
 </script>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
