@@ -354,15 +354,15 @@
                         </ul>
                     </nav>
                     <div class="contact_info">
-                        <img src="Architecture/solve/contact/home.png" class="contact_logo" style="height: 18px; width: 20px;">
+                        <img src="Architecture/solve/contact/home.png" class="contact_logo" style="height: 0.9375vw; width: 1.0416666666666667vw;">
                         <p>{{info.Contact[contact_mean].Address}}</p>
-                        <img src="Architecture/solve/contact/phone.png" class="contact_logo" style="height: 16px; width: 14px;">
+                        <img src="Architecture/solve/contact/phone.png" class="contact_logo" style="height: 0.8333333333333334vw; width: 0.7291666666666666vw;">
                         <p>{{info.Contact[contact_mean].Phone}}</p>
-                        <img src="Architecture/solve/contact/emall.png" class="contact_logo" style="height: 12px; width: 17px;">
+                        <img src="Architecture/solve/contact/emall.png" class="contact_logo" style="height: 0.625vw; width: 0.8854166666666666vw;">
                         <p>{{info.Contact[contact_mean].Email}}</p>
-                        <img src="Architecture/solve/contact/facebook.png" class="contact_logo" style="height: 18px; width: 18px;">
+                        <img src="Architecture/solve/contact/facebook.png" class="contact_logo" style="height: 0.9375vw; width: 0.9375vw;">
                         <p>Facebook: <a :href="info.Contact[contact_mean].LinkFB" target="_blank">{{info.Contact[contact_mean].FB}}</a></p>
-                        <img src="Architecture/solve/contact/web.png" class="contact_logo" style="height: 22px; width: 22px;">
+                        <img src="Architecture/solve/contact/web.png" class="contact_logo" style="height: 1.1458333333333333vw; width: 1.1458333333333333vw;">
                         <p>Website: <a :href="info.Contact[contact_mean].Web" target="_blank">{{info.Contact[contact_mean].Web}}</a></p>
                     </div>
                 </div>
@@ -502,8 +502,8 @@
         }
     }, 500);
     setTimeout(function() {
-        for (let index = 0; index < 16; index++) {
-            document.getElementById("load_gif" + index).remove();
+        for (let index = 0; index < 17; index++) {
+            document.getElementById("load" + index).remove();
         }
     }, 8000);
 </script>
