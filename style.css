@@ -1,0 +1,831 @@
+:root {
+    --logo_size: 125px;
+    --button_size_x: 217px;
+    --button_size_y: 54px;
+    --mood_tone_1: #f2f2f2;
+    --mood_tone_2: #f6d8bc;
+    --mood_tone_3: #5a7fbb;
+    --mood_tone_4: #ed6c4b;
+    --mood_tone_5: #d74e34;
+    --button_color: #b7a9a6;
+    --topic_or_button_font: 'Prompt', sans-serif;
+    --text_font: 'Bai Jamjuree', sans-serif;
+    --menu_size: 20px;
+    --topic_size: 2.2135787212275vw;
+    --topic2_size: 1.5218353708439063vw;
+    --text_size: 1.245138030690469vw;
+    --home_img2: url('');
+    --home_text2_posision: 14.739583333333334vw !important;
+    --button_b_n_posision: 10%;
+    --overflow: auto;
+}
+
+html,
+body,
+#app,
+.nav {
+    /* สีพื้นหลัง*/
+    background-color: var(--mood_tone_1);
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow: var(--overflow);
+}
+
+.row {
+    width: 110% !important;
+}
+
+.bg_ladl1,
+.bg_ladl2,
+.bg_ladl3 {
+    position: fixed;
+    background-repeat: no-repeat;
+    bottom: -2.8125vw;
+}
+
+.bg_ladl1 {
+    z-index: 1;
+    left: 0;
+    height: 21.258854166666666vw;
+}
+
+.bg_ladl2 {
+    z-index: 1;
+    right: 0;
+    height: 21.258854166666666vw;
+}
+
+.bg_ladl3 {
+    z-index: 0;
+    height: 13.4375vw;
+    width: 100%;
+}
+
+.col-4,
+.col {
+    z-index: 10;
+}
+
+
+/* ปุ่มเลื่อนขึ้นบนสุด*/
+
+#Btn_top {
+    position: fixed;
+    bottom: 1.0416666666666667vw;
+    right: 1.5625vw;
+    font-size: 18px;
+    font-family: var(--text_font);
+    border: none;
+    outline: none;
+    background-color: var(--mood_tone_5);
+    color: white;
+    cursor: pointer;
+    padding: 0.78125vw;
+    border-radius: 0.20833333333333334vw;
+    z-index: 9999;
+}
+
+#Btn_top:hover {
+    background-color: var(--mood_tone_2);
+}
+
+
+/* ปุ่มเลื่อนขึ้นบนสุด*/
+
+
+/* แทบเมนูด้านบน*/
+
+.menu {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    padding-top: 2.7083333333333335vw !important;
+    /* padding-top: 52px !important; */
+    padding-bottom: 0 !important;
+    /* padding-left: 306px !important;
+    padding-right: 300px !important; */
+    padding-left: 15.78125vw !important;
+    padding-right: 15.78125vw !important;
+    z-index: 9999999;
+}
+
+.menu_page {
+    margin-top: -5.208333333333333vw !important;
+}
+
+.container {
+    margin-top: 9.114583333333334vw;
+}
+
+.row {
+    width: 100%;
+    height: 45.0vw;
+}
+
+.button {
+    cursor: pointer;
+    color: var(--button_color);
+    font-size: var(--menu_size);
+    font-family: var(--topic_or_button_font);
+}
+
+.button:hover {
+    color: var(--mood_tone_3);
+}
+
+.nav-item {
+    margin-left: 1.0416666666666667vw;
+}
+
+.logo_png {
+    width: 6.614583333333333vw;
+    height: 7.8125vw;
+    /* width: 127px;
+    height: 150px; */
+    cursor: pointer;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+/* แทบเมนูด้านบน*/
+
+
+/*หน้าก่อนเข้า time_to_bloom*/
+
+#before {
+    /* margin: auto; */
+    width: 226px;
+    height: 267px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+
+/*หน้าก่อนเข้า time_to_bloom*/
+
+
+/* หน้า  time_to_bloom*/
+
+.Time_To_Bloom_container {
+    /* padding-top: 202px; */
+    padding-top: 10.520833333333334vw;
+    margin-top: 0 !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: 15.78125vw !important;
+    /* margin-right: 290px !important; */
+}
+
+.Time_To_Bloom_row {
+    margin: 0 !important;
+}
+
+.Time_To_Bloom_bg_vdo {
+    /* position: fixed; */
+    /* width: 704px;
+    height: 917.69px; */
+    width: 36.666666666666664vw;
+    height: 47.79635416666667vw;
+    /* margin-top: -200px !important; */
+    /* margin-right: -163px !important; */
+    margin-top: -10.416666666666666vw !important;
+    margin-right: -8.489583333333334vw !important;
+    /* right: 290px; */
+    /* top: 0px; */
+    /* z-index: 1 !important; */
+}
+
+.logo_gif {
+    /* content:url(Architecture/home_page/final.gif); */
+    transform: scale(2) translateY(6%);
+    display: block;
+    /* width: 704px;
+    height: 917.69px; */
+    height: 25.3125vw;
+    margin: auto;
+    z-index: -1;
+    /* padding-top: 45px; */
+}
+
+.time_to_bloom_text {
+    font-family: var(--topic_or_button_font);
+    margin: 0;
+    font-size: 4.203125vw;
+    letter-spacing: 0.10416666666666667vw;
+    text-align: left;
+    line-height: 4.359375vw;
+    padding-bottom: 3.125vw;
+    padding-top: 7.135416666666667vw;
+    padding-right: 8.489583333333334vw;
+    /* padding-bottom: 60px;
+    padding-top: 137px;
+    padding-right: 163px; */
+}
+
+.time_to_bloom {
+    /*buuton*/
+    cursor: pointer;
+    background-size: 16.666666666666668vw 4.166666666666667vw;
+    background-position: center;
+    width: 16.666666666666668vw;
+    height: 4.166666666666667vw;
+    border: 0px;
+    border-radius: 10px;
+    position: relative;
+    left: 3.8541666666666665vw;
+    /* padding-right: 241px; */
+}
+
+.time_to_bloom:active {
+    /*buuton*/
+    transform: scale(0.8);
+    transition: 0.075s;
+}
+
+
+/* หน้า  time_to_bloom*/
+
+
+/* หน้า Home*/
+
+.home_bg_vdo {
+    width: 31.09375vw;
+    height: 36.02760416666667vw;
+}
+
+.home_gif1 {
+    width: 100%;
+}
+
+.home_topic_text {
+    padding-top: 7.760416666666667vw;
+    padding-bottom: 2.5520833333333335vw;
+    margin: 0;
+}
+
+.home_topic_text2 {
+    padding-bottom: 1.875vw;
+    margin: 0;
+}
+
+.home_bg_vdo2 {
+    position: fixed;
+    left: 18vw;
+    /* right: 17.1875vw; */
+    width: 65.625vw;
+    height: 43.4375vw;
+}
+
+.home_gif2 {
+    /* background-image: var(--home_img2);  */
+    background-size: 90% 53.4375vw;
+    width: 100%;
+    height: 45.0vw;
+    left: 0;
+    right: 0;
+    background-position: center;
+    /* margin-top: 7%; */
+    background-repeat: no-repeat;
+}
+
+.home_text2 {
+    padding-top: 4.6875vw;
+    /* padding-left: 14.739583333333334vw !important; */
+    /* padding-right: 14.895833333333334vw !important; */
+}
+
+.home_text2 .text {
+    /* width: 691px !important; */
+    margin: auto;
+}
+
+.home_gif2 .container {
+    margin-left: 290px !important;
+    margin-right: 290px !important;
+}
+
+.home_topic_text2 {
+    /* width: 691px !important; */
+    text-align: center;
+    padding-left: 6vw;
+}
+
+
+/* หน้า Home*/
+
+
+/* หน้า law */
+
+
+/* กฎหมายการเลือกตั้ง*/
+
+#law_vdo1 {
+    position: fixed;
+    top: 11.888020833333336vw;
+    left: 9.138020833333332vw;
+}
+
+#law_topic1 {
+    position: sticky;
+    top: 10.39375vw;
+    left: 36.5625vw;
+}
+
+#law_text1 {
+    position: sticky;
+    top: 16.1796875vw;
+    left: 17.864583333333332vw;
+    bottom: 5.052083333333333vw;
+}
+
+
+/* กฎหมายการเลือกตั้ง*/
+
+
+/* กฎหมายการลาคลอด*/
+
+#law_vdo2 {
+    position: fixed;
+    top: 10.9992vw;
+    left: 15vw;
+}
+
+#law_topic2 {
+    position: sticky;
+    top: 10.546354166666665vw;
+    left: 28.51979166666667vw;
+    bottom: 2.1875vw;
+}
+
+#law_text2 {
+    position: sticky;
+    top: 19.4296875vw;
+    left: 17.864583333333332vw;
+    bottom: 5.052083333333333vw;
+}
+
+
+/* กฎหมายการลาคลอด*/
+
+
+/* หน้า law */
+
+
+/* หน้า Draf law */
+
+
+/*แก้ layout*/
+
+
+/*.vdo1{
+    margin-left: 50px !important;
+    top: 1.979502196193265vw;
+    width: ;
+    height: ;
+}*/
+
+.vdo2 {
+    margin-left: 0vw;
+    top: 17.2vw;
+    width: 52.916666666666664vw;
+    height: 32.8125vw;
+}
+
+.vdo3 {
+    left: 14.9vw;
+    top: 15.53125vw;
+    width: 53.385416666666664vw;
+    height: 39.114583333333336vw;
+}
+
+.vdo4 {
+    margin-left: 0vw;
+    top: 16.73060029282576vw;
+    width: 45.989583333333336vw;
+    height: 38.90625vw;
+}
+
+.vdo5 {
+    left: 10.497803806734993vw;
+    top: 16.993060029282576vw;
+    width: 60vw;
+    height: 37.5vw;
+}
+
+.lay_text1 {
+    margin-top: 2.662225475841874vw;
+    /* margin-left: 3.294289897510981vw;*/
+}
+
+.lay_text2 {
+    margin-top: 2.562225475841874vw;
+}
+
+.lay_text3 {
+    margin-top: 5.662225475841874vw;
+}
+
+.lay_text3_1 {}
+
+.lay_text4 {
+    margin-top: 2.562225475841874vw;
+}
+
+.topic2 {
+    position: absolute;
+    margin-top: -4%;
+    line-height: 2vw;
+    font-family: var(--topic_or_button_font);
+    color: var(--mood_tone_5);
+    font-weight: bold;
+    font-size: var(--topic2_size);
+}
+
+.text1 {
+    position: absolute;
+    margin-top: 4.5vw;
+    font-family: var(--text_font);
+    font-size: var(--text_size);
+}
+
+
+/*แก้ layout*/
+
+.draf_law_bg_vdo3 {
+    position: fixed;
+    left: 291px;
+    width: 1025px;
+    height: 751px;
+}
+
+
+/*ทำแท้งเสรี*/
+
+#draft_vdo {
+    width: 100vw;
+    position: fixed;
+    top: 12vw;
+    left: 5vw;
+}
+
+#draft_topic_text {
+    position: sticky;
+    width: 23vw;
+}
+
+#draft_text {
+    position: sticky;
+    width: 30vw;
+}
+
+
+/*ทำแท้งเสรี*/
+
+
+/* หน้า Draf law */
+
+
+/*หน้า Contact*/
+
+.test {
+    width: 37.083333333333336vw;
+    height: 36.97916666666667vw;
+}
+
+.contact_container {
+    padding-top: 3.4895833333333326vw !important;
+    margin-left: 16vw !important;
+    /* margin-left: 338px !important;
+    margin-right: 338px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important; */
+}
+
+.contact {
+    height: 19.062500000624997vw;
+    width: 27.8125vw;
+    background-color: var(--mood_tone_3);
+    padding: 0 !important;
+}
+
+.contact_logo {
+    float: left;
+    margin-right: 5px;
+}
+
+.contact_menu {
+    padding: 0 !important;
+}
+
+.contact_menu .nav-pills .nav-item {
+    padding: 0 !important;
+    margin: 0;
+    flex: auto;
+    text-align: center;
+}
+
+.contact_menu .nav-pills {
+    background-color: #8fb5d9;
+    width: 100%;
+}
+
+.contact_menu .nav-pills .nav-item .nav-link {
+    color: white;
+    border-radius: 0;
+    font-family: var(--topic_or_button_font);
+    /* width: 178px;
+    height: 62px; */
+    /* padding: 0; */
+    margin: 0;
+    /* font-size: 18px; */
+    /* font-weight: bold; */
+    /* padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 17.5px;
+    padding-bottom: 17.5px; */
+}
+
+.contact_menu .nav-pills .nav-link.active {
+    background-color: var(--mood_tone_3);
+}
+
+.contact_info {
+    padding-top: 3.48958333333125vw;
+    padding-left: 1.77083333vw;
+    padding-right: 1.45833333vw;
+    color: white;
+    font-family: var(--text_font);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.contact_info p {
+    margin-bottom: 2px;
+}
+
+.contact_info a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact_info a:hover {
+    color: var(--mood_tone_4);
+    text-decoration: none;
+}
+
+
+/*หน้า Contact*/
+
+.topic_text {
+    font-family: var(--topic_or_button_font);
+    color: var(--mood_tone_5);
+    font-size: var(--topic_size);
+    font-weight: bold;
+}
+
+.text {
+    font-family: var(--text_font);
+    font-size: var(--text_size);
+}
+
+
+/* ปุ่มด้านล่าง*/
+
+.back {
+    margin-right: auto;
+    margin-left: var(--button_b_n_posision);
+}
+
+.back {
+    width: 50px;
+    /* opacity:0; */
+}
+
+
+/* ปุ่มด้านล่าง*/
+
+
+/* เมล็ด */
+
+
+/*กฎหมายการเลือกตั้ง*/
+
+.flower_5 {
+    margin-top: -15vw;
+    width: 3vw;
+    height: 3vw;
+}
+
+.gif_5 {
+    margin-top: -18vw;
+    height: 18vw;
+    width: 15vw;
+}
+
+.seed_5 {
+    margin-top: -15vw;
+    height: 3vw;
+    width: 3vw;
+}
+
+
+/*กฎหมายการเลือกตั้ง*/
+
+
+/*กฎหมายลาคลอด*/
+
+.flower_6 {
+    margin-top: -15vw;
+    height: 2vw;
+    width: 2vw;
+}
+
+.gif_6 {
+    margin-top: -15vw;
+    height: 10vw;
+    width: 12vw;
+}
+
+.seed_6 {
+    margin-top: -15vw;
+    height: 2vw;
+    width: 2vw;
+    margin-bottom: 2vw;
+}
+
+
+/*กฎหมายลาคลอด*/
+
+
+/*ร่าง*/
+
+.flower_0 {
+    height: 3vw;
+    width: 3vw;
+}
+
+.gif_0 {
+    height: 10vw;
+    width: 12vw;
+    margin-top: -9vw;
+}
+
+.seed_0 {
+    height: 3vw;
+    width: 3vw;
+    margin-top: -8vw;
+}
+
+
+/*--------------------------------------------*/
+
+.flower_1 {
+    height: 3vw;
+    width: 3vw;
+}
+
+.gif_1 {
+    height: 10vw;
+    width: 12vw;
+    margin-top: -9vw;
+}
+
+.seed_1 {
+    height: 3vw;
+    width: 3vw;
+    margin-top: -8vw;
+}
+
+
+/*---------------------------------------------*/
+
+.flower_2 {
+    height: 3vw;
+    width: 3vw;
+}
+
+.gif_2 {
+    height: 10vw;
+    width: 12vw;
+    margin-top: -9vw;
+}
+
+.seed_2 {
+    height: 3vw;
+    width: 3vw;
+    margin-top: -8vw;
+}
+
+
+/*---------------------------------------------*/
+
+.flower_3 {
+    height: 3vw;
+    width: 3vw;
+    margin-top: -14vw;
+}
+
+.gif_3 {
+    height: 10vw;
+    width: 12vw;
+    margin-top: -24vw;
+}
+
+.seed_3 {
+    height: 3vw;
+    width: 3vw;
+    margin-top: -24vw;
+}
+
+
+/*---------------------------------------------*/
+
+.flower_4 {
+    height: 3vw;
+    width: 3vw;
+    margin-top: -14vw;
+}
+
+.gif_4 {
+    height: 10vw;
+    width: 12vw;
+    margin-top: -24vw;
+}
+
+.seed_4 {
+    height: 3vw;
+    width: 3vw;
+    margin-top: -24vw;
+}
+
+
+/*ร่าง*/
+
+
+/*text_seed*/
+
+.text_seed {
+    margin-top: -2vw;
+}
+
+.text_seed_1 {
+    margin-top: -8vw;
+}
+
+.text_seed_2 {
+    margin-top: -2vw;
+}
+
+
+/*รูปดอก*/
+
+.img_fow {
+    margin-top: -10.5vw;
+    margin-left: 3vw;
+}
+
+.text_fow_00 {
+    margin-top: 1vw;
+}
+
+.img_fow_1 {
+    margin-top: -8.5vw;
+}
+
+.text_fow_01 {
+    margin-top: 1vw;
+}
+
+.img_fow_2 {
+    margin-top: -9vw;
+}
+
+.img_fow_3 {
+    margin-top: -20vw;
+}
+
+.img_fow_4 {
+    margin-top: -21.5vw;
+}
+
+.text_fow {
+    margin-top: -0.5vw;
+}
+
+.text_fow_1 {
+    margin-top: 0.2vw;
+}
+
+.text_fow_2 {
+    margin-top: 0.3vw;
+}
+
+
+/* เมล็ด */

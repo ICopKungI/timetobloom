@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Index</title>
+    <link rel="icon" href="Architecture/logoweb.png" type="image" sizes="16x16">
+</head>
+
+<body>
+
+    <div id="app">
+
+        <!---โหลดGif--->
+        <img src="Architecture/solve/flower/Whiteflowers/Whiteflowers1.gif" id="load_gif0" style="display: none;">
+        <img src="Architecture/solve/flower/Purpleflowers/Purpleflowers1.gif" id="load_gif1" style="display: none;">
+        <img src="Architecture/solve/flower/Pinkflowers/Pinkflowers1.gif" id="load_gif2" style="display: none;">
+        <img src="Architecture/solve/flower/Blueflowers/Blueflowers1.gif" id="load_gif3" style="display: none;">
+        <img src="Architecture/solve/flower/Redflowers/Redflowers3.gif" id="load_gif4" style="display: none;">
+        <img src="Architecture/solve/flower/Anotherredflower/Anotherredflower4.gif" id="load_gif5" style="display: none;">
+        <img src="Architecture/solve/flower/Blackflower2/Blackflower1.gif" id="load_gif6" style="display: none;">
+        <!---โหลดGif--->
+
+        <!-- หน้าก่อนเข้าหน้า Home -->
+        <div v-if="what_page == 'Before_Time_To_Bloom'">
+            <video src="Architecture/Page_before entering_home page/time to bloom.mp4" autoplay muted style="margin: 0;" id="before"> </video>
+        </div>
+        <!-- หน้าก่อนเข้าหน้า Home -->
+
+        <!-- แถบเมนูด้านบน -->
+        <nav v-if="what_page != 'Before_Time_To_Bloom'" class="navbar navbar-expand menu">
+
+            <img src="Architecture/logoweb.png" class="navbar-brand navbar-nav logo_png" @click="change_page('Time_To_Bloom')">
+
+            <ul data-aos="fade-down" v-if="what_page != 'Time_To_Bloom'" class="navbar-nav ml-auto menu_page" style="font-weight: bold;">
+                <li class="nav-item">
+                    <a class="nav-link button" @click="change_page('Home')">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link button" @click="change_page('Law')">Law</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link button" @click="change_page('Draftlaw')">Draftlaw</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link button" @click="change_page('Contact')">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- แถบเมนูด้านบน -->
+
+        <!-- หน้า Time_To_Bloom -->
+        <div v-if="what_page == 'Time_To_Bloom'" class="container Time_To_Bloom_container">
+            <div class="row Time_To_Bloom_row">
+                <div class="cal-6">
+                    <p class="time_to_bloom_text" style="font-weight: bold;">Discover all<br>about law<br>for women
+                        <br>in Thailand</p>
+                    <img class="time_to_bloom" src="Architecture/Time_To_Bloom_page/time_to_bloom.png" @click="change_page('Home')">
+                </div>
+                <div class="cal-6">
+                    <video src="final3 - Copy.mp4" autoplay muted style="margin: 0;" class="Time_To_Bloom_bg_vdo"></video>
+                </div>
+            </div>
+        </div>
+        <!-- หน้า Time_To_Bloom -->
+
+        <!-- หน้า Home -->
+        <div v-if="what_page == 'Home'" class="container">
+            <div class="row">
+                <video data-aos-anchor-placement="top-bottom" data-aos="fade-right" src="Architecture/solve/homepage/Waterdrop1.mp4" autoplay muted style="margin: 0; left: -4vw;" class="col-6 home_bg_vdo"></video>
+                <div data-aos-anchor-placement="top-bottom" data-aos="fade-left" class="col-6" style="padding-right: -5.15625vw;">
+                    <p class="topic_text home_topic_text" style="color: #5382bf; font-size: 2.417999vw; width: 40vw;">
+                        {{info.Home[0].LawName}}
+                    </p>
+                    <p class="text" style="width: 31.5vw;">
+                        {{info.Home[0].Mean}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" v-if="what_page == 'Home'">
+
+            <video src="Architecture/solve/homepage/Frame3.mp4" autoplay muted style="margin: 0;" class="home_bg_vdo2"></video>
+            <div v-if="what_page == 'Home'" class="container">
+                <div data-aos-anchor-placement="top-bottom" data-aos="fade-down" class="home_text2">
+                    <p class="topic_text home_topic_text2" style="color: #5382bf; font-size: 2.418vw;">
+                        {{info.Home[1].LawName}}
+                    </p>
+                    <p class="text" style="width: 35vw;position: relative;left: 3.5vw;">
+                        {{info.Home[1].Mean}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- หน้า Home -->
+
+        <!-- หน้า Law -->
+        <div v-if="what_page == 'Law'" class="container">
+            <div v-if="what_law == 'Main'" class="row justify-content-around">
+                <div class="col-2"></div>
+                <div class="col align-self-center text-center" v-if="!status_law[0]" style="margin-left: 3vw;">
+                    <img v-if="!hover_5" src="Architecture/solve/flower/Anotherredflower/Anotherredseed.png" @mouseover="change_hover(5, true)" @click="change_law('law0')" class="seed_5">
+                    <img v-if="hover_5" src="Architecture/solve/flower/Anotherredflower/Anotherredflower4.gif" @mouseleave="change_hover(5, false)" @click="change_law('law0')" class="gif_5">
+                    <br>
+                    <p class="text_seed_2">กฎหมายการเลือกตั้ง</p>
+                </div>
+                <div class="img_fow col align-self-center text-center" v-if="status_law[0]"><img @click="change_law('law0')" src="Architecture/solve/flower/Anotherredflower/Anotherredflower.png" style="width: 8.1828vw; height: 10.4361vw;"><br>
+                    <p class="text_fow_00">กฎหมายการเลือกตั้ง</p>
+                </div>
+                <div class="col align-self-center text-center" v-if="!status_law[1]">
+                    <img v-if="!hover_6" src="Architecture/solve/flower/Blackflower2/Blackseed2.png" @mouseover="change_hover(6, true)" @click="change_law('law1')" class="seed_6">
+                    <img v-if="hover_6" src="Architecture/solve/flower/Blackflower2/Blackflower1.gif" @mouseleave="change_hover(6, false)" @click="change_law('law1')" class="gif_6">
+                    <br>
+                    <p class="text_seed_2">กฎหมายลาคลอด</p>
+                </div>
+                <div class="img_fow_1 col align-self-center text-center" v-if="status_law[1]"><img @click="change_law('law1')" src="Architecture/solve/flower/Blackflower2/Blackflower2.png" style="width: 8.333333333333334vw; height: 8.333333333333334vw;"><br>
+                    <p class="text_fow_01">กฎหมายลาคลอด</p>
+                </div>
+                <div class="col"></div>
+
+            </div>
+            <div v-if="what_law == 'law0'" class="row">
+                <div class="col-7">
+                    <video src="Architecture/solve/law/Election.mp4" autoplay muted style="margin: 0;" class="home_bg_vdo2" id="law_vdo1"></video>
+                </div>
+                <div class="col-5" style="left: -7vw;">
+                    <p class="topic_text" id="law_topic1" style="font-size: 2.418vw; width: 40vw;">
+                        {{info.Law[0].LawN}}
+                    </p>
+                    <p class="text" id="law_text1" style="width: 39vw; margin-left: -5vw; text-indent: 40px; ">
+                        {{info.Law[0].LawMean1}}
+                    </p>
+                    <p class="text" id="law_text1" style="width: 37vw; margin-left: -5vw; text-indent: 40px;  top: 23vw; ">
+                        {{info.Law[0].LawMean2}}</p>
+                </div>
+            </div>
+            <div v-if="what_law == 'law1'" class="row">
+                <div class="col-5">
+                    <video src="Architecture/solve/law/Maternity leave1.mp4" autoplay muted style="margin: 0;" class="home_bg_vdo2" id="law_vdo2"></video>
+                </div>
+                <div class="col-7" style="left: -4vw;">
+                    <p class="topic_text" id="law_topic2" style="font-size: 2.418vw; width: 40vw;">
+                        {{info.Law[1].LawN}}
+                    </p>
+                    <p class="topic_text" id="law_topic2" style="font-weight:lighter; font-size: 1.8vw; top: 10vw;">
+                        {{info.Law[1].LawN1}}</p>
+
+
+                    <p class="text" id="law_text2" style="text-indent: 40px; top: 10vw; width: 35vw;">
+                        {{info.Law[1].LawMean1}}
+                    </p>
+                    <p class="text" id="law_text2" style="text-indent: 40px; width: 35vw;">
+                        {{info.Law[1].LawMean2}}</p>
+                </div>
+            </div>
+        </div>
+        <!-- หน้า Law -->
+
+
+        <!-- หน้า Draftlaw -->
+        <div v-if="what_page == 'Draftlaw'" class="container">
+            <div v-if="what_draft_law == 'Main'" class="row align-items-center" style="margin-left: -3vw; padding-top: 3vw;">
+
+                <div class="col-4 align-self-center text-center" v-if="!status_draft_law[0]">
+                    <img v-if="!hover_0" src="Architecture/solve/flower/Whiteflowers/Whiteseed.png" @mouseover="change_hover(0, true)" @click="change_draw_law('draw_law0')" class="seed_0">
+                    <img v-if="hover_0" src="Architecture/solve/flower/Whiteflowers/Whiteflowers1.gif" @mouseleave="change_hover(0, false)" @click="change_draw_law('draw_law0')" class="gif_0"><br>
+
+                    <p class="text_seed">ร่าง{{info.Draftlaw[0].DLName1}}
+                    </p>
+                </div>
+                <div class="img_fow_2 col-4 align-self-center text-center" v-if="status_draft_law[0]"><img @click="change_draw_law('draw_law0')" src="Architecture/solve/flower/Whiteflowers/Whiteflowers.png" style="width: 8.416666666666666vw; height: 8.416666666666666vw; margin-bottom: 1vw;"><br>
+                    <p class="text_fow">ร่าง{{info.Draftlaw[0].DLName1}}</p>
+
+                </div>
+
+                <div class="col-4 align-self-center text-center" v-if="!status_draft_law[1]">
+                    <img v-if="!hover_1" src="Architecture/solve/flower/Purpleflowers/Purpleseed.png" @mouseover="change_hover(1, true)" @click="change_draw_law('draw_law1')" class="seed_1">
+                    <img v-if="hover_1" src="Architecture/solve/flower/Purpleflowers/Purpleflowers1.gif" @mouseleave="change_hover(1, false)" @click="change_draw_law('draw_law1')" class="gif_1">
+                    <br>
+                    <p class="text_seed">ร่าง{{info.Draftlaw[1].DLName1}}</p>
+                </div>
+                <div class="img_fow_2 col-4 align-self-center text-center" v-if="status_draft_law[1]"><img @click="change_draw_law('draw_law1')" src="Architecture/solve/flower/Purpleflowers/Purpleflowers.png" style="width: 8.416666666666666vw; height: 8.416666666666666vw;"><br>
+                    <p class="text_fow_1">ร่าง{{info.Draftlaw[1].DLName1}}</p>
+                </div>
+
+                <div class="col-4 align-self-center text-center" v-if="!status_draft_law[2]">
+                    <img v-if="!hover_2" src="Architecture/solve/flower/Pinkflowers/Pinkseed.png" @mouseover="change_hover(2, true)" @click="change_draw_law('draw_law2')" class="seed_2">
+                    <img v-if="hover_2" src="Architecture/solve/flower/Pinkflowers/Pinkflowers1.gif" @mouseleave="change_hover(2, false)" @click="change_draw_law('draw_law2')" class="gif_2">
+                    <br>
+
+                    <p class="Draft text_seed" style="margin-left: 2.5vw;">
+                        ร่าง{{info.Draftlaw[2].DLName1}}
+                    </p>
+
+                </div>
+                <div class="img_fow_2 col-4 align-self-center text-center" v-if="status_draft_law[2]"><img @click="change_draw_law('draw_law2')" src="Architecture/solve/flower/Pinkflowers/Pinkflowers.png" style="width: 8.416666666666666vw; height: 8.416666666666666vw; "><br>
+
+                    <p>ร่าง{{info.Draftlaw[2].DLName1}}
+                    </p>
+
+                </div>
+                <div class="col-2"></div>
+                <div class="col-4 align-self-center text-center" v-if="!status_draft_law[3]">
+                    <img v-if="!hover_3" src="Architecture/solve/flower/Blueflowers/Blueseed.png" @mouseover="change_hover(3, true)" @click="change_draw_law('draw_law3')" class="seed_3">
+                    <img v-if="hover_3" src="Architecture/solve/flower/Blueflowers/Blueflowers1.gif" @mouseleave="change_hover(3, false)" @click="change_draw_law('draw_law3')" class="gif_3">
+                    <br>
+                    <p class="text_seed_1">ร่าง{{info.Draftlaw[3].DLName1}}</p>
+                </div>
+                <div class="img_fow_3 col-4 align-self-center text-center" v-if="status_draft_law[3]"><img @click="change_draw_law('draw_law3')" src="Architecture/solve/flower/Blueflowers/Blueflowers.png" style="width: 8.416666666666666vw; height: 8.416666666666666vw; "><br>
+                    <p class="text_fow_2">ร่าง{{info.Draftlaw[3].DLName1}}</p>
+                </div>
+
+                <div class="col-4 align-self-center text-center" v-if="!status_draft_law[4]">
+                    <img v-if="!hover_4" src="Architecture/solve/flower/Redflowers/Lastseed.png" @mouseover="change_hover(4, true)" @click="change_draw_law('draw_law4')" class="seed_4">
+                    <img v-if="hover_4" src="Architecture/solve/flower/Redflowers/Redflowers3.gif" @mouseleave="change_hover(4, false)" @click="change_draw_law('draw_law4')" class="gif_4">
+                    <br>
+                    <p class="text_seed_1">ร่าง{{info.Draftlaw[4].DLName1}}</p>
+                </div>
+                <div class="img_fow_4 col-4 align-self-center text-center" v-if="status_draft_law[4]"><img @click="change_draw_law('draw_law4')" src="Architecture/solve/flower/Redflowers/Redflowers2.png" style="width: 7.41667vw; height: 9.41667vw;; "><br>
+                    <p class="text_fow_2">ร่าง{{info.Draftlaw[4].DLName1}}</p>
+                </div>
+            </div>
+            <div v-if="what_draft_law == 'draw_law0'" class="row">
+                <div class="col-7">
+                    <video src="Architecture/solve/draftlaw/Freeabortionlaw2.mp4" autoplay muted style="margin: 0;" class="vdo1 home_bg_vdo2" id="draft_vdo"></video>
+                </div>
+                <div class="col-5" style="left: -6vw; top: 2vw;">
+                    <p class="lay_text1 topic_text" id="draft_topic_text" style="font-size: 2.418vw; top: 13vw;">
+                        {{info.Draftlaw[0].DLName1}}
+                    </p>
+                    </p>
+                    <p class="lay_text1 topic_text" id="draft_topic_text" style="width: 30vw; font-weight:lighter; margin-top: -1vw; font-size: 1.8vw;">
+                        {{info.Draftlaw[0].DLName2}}</p>
+                    <p class="text" id="draft_text" style="text-indent: 40px;width: 33vw;  top: -10vw;">
+                        {{info.Draftlaw[0].DLMean1}}
+                    </p>
+
+                </div>
+            </div>
+            <div v-if="what_draft_law == 'draw_law1'" class="row">
+                <div class="col-5">
+                    <video src="Architecture/solve/draftlaw/Married with children 1.mp4" autoplay muted style="margin: 0;" class="vdo2 home_bg_vdo2"></video>
+                </div>
+                <div class="col-7">
+                    <p class="lay_text2 topic_text" style="width: 30vw; position: sticky; font-size: 2.418vw;">
+                        {{info.Draftlaw[1].DLName1}}
+                    </p>
+                    <p class="lay_text2 topic_text" style="width: 27vw; position: sticky;font-weight:lighter; margin-top: -1vw; font-size: 1.8vw;">
+                        {{info.Draftlaw[1].DLName2}}</p>
+                    <p class="text" style="width: 37vw; margin-top: 1.562225475841874vw; position: sticky;">
+                        {{info.Draftlaw[1].DLMean1}}
+                    </p>
+                </div>
+            </div>
+            <div v-if="what_draft_law == 'draw_law2'" class="row">
+                <div style="margin-top:10;" class="col-5">
+                    <video src="Architecture/solve/draftlaw/Safe city laws for women.mp4" autoplay muted style="margin: 0;" class="vdo3 home_bg_vdo2"></video>
+                </div>
+                <div class="col-7">
+                    <!--แก้ layout-->
+                    <p class="lay_text3 topic_text" style="position: sticky; font-size: 2.4vw;width: 40vw;">
+                        {{info.Draftlaw[2].DLName1}}
+                    </p>
+                    <p class="lay_text3 topic_text" style="font-weight: lighter; margin-top: -1vw; font-size: 1.6vw; width: 50vw;">
+                        {{info.Draftlaw[2].DLName2}}</p>
+                    <p class="lay_text3_1 text" style="text-indent: 40px; width: 35vw;">
+                        {{info.Draftlaw[2].DLMean1}}<br>
+                    </p>
+                    <p class="lay_text3_1 text" style="text-indent: 40px; width: 35vw;">{{info.Draftlaw[2].DLMean2}}</p>
+                </div>
+            </div>
+            <div v-if="what_draft_law == 'draw_law3'" class="row">
+                <div class="col-5">
+                    <video src="Architecture/solve/draftlaw/Dress law in various professions.mp4" autoplay muted style="margin: 0;" class="vdo4 home_bg_vdo2"></video>
+                </div>
+                <div class="col-7" style="left: -2vw; top: 2vw;">
+                    <p class="lay_text4 topic_text" style="width: 50vw;text-indent: 40px; margin-top:0;  margin-left: -2vw; font-size: 2.418vw;">
+                        {{info.Draftlaw[3].DLName1}}
+                    </p>
+                    <p class="lay_text4 topic_text" style="width: 37vw;text-indent: 40px; margin-top:0; margin-left: -2vw; font-weight: lighter; margin-top: -1vw; font-size: 1.6vw;">
+                        {{info.Draftlaw[3].DLName2}}</p>
+                    <p class="text" style="width: 37vw;text-indent: 40px; ">
+                        {{info.Draftlaw[3].DLMean1}}<br>
+                    </p>
+                    <p class="text" style="width: 37vw;text-indent: 40px;">{{info.Draftlaw[3].DLMean2}}</p>
+
+                </div>
+            </div>
+            <div v-if="what_draft_law == 'draw_law4'" class="row">
+                <div class="col-5">
+                    <video src="Architecture/solve/draftlaw/prostitute.mp4" autoplay muted style="margin: 0;" class="vdo5 home_bg_vdo2"></video>
+                </div>
+                <div class="col-7" style="left: -2vw;">
+                    <p class="lay_text5 topic_text" style="margin-bottom: 0;">
+                        {{info.Draftlaw[4].DLName1}}
+                    </p>
+                    <p class="lay_text5 topic_text" style="font-weight: lighter; font-size: 1.8vw;">
+                        {{info.Draftlaw[4].DLName2}}</p>
+                    <p class="text" style="width: 38vw;text-indent: 40px; ">
+                        {{info.Draftlaw[4].DLMean1}}
+                    </p>
+                    <p class="text" style="width: 38vw;text-indent: 40px; ">
+                        {{info.Draftlaw[4].DLMean2}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- หน้า Draftlaw -->
+
+        <!-- หน้า Contact -->
+        <div v-if="what_page == 'Contact'" class="container contact_container">
+            <div class="row" style="margin-left: 3vw;">
+                <div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="col-5 contact" style="right: 3vw;">
+                    <nav class="navbar navbar-expand contact_menu">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#" role="tab" aria-selected="true" @click="contact_mean = 0">{{info.Contact[0].CName}}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-selected="false" @click="contact_mean = 1">{{info.Contact[1].CName}}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-selected="false" @click="contact_mean = 2">{{info.Contact[2].CName}}</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="contact_info">
+                        <img src="Architecture/solve/contact/home.png" class="contact_logo" style="height: 18px; width: 20px;">
+                        <p>{{info.Contact[contact_mean].Address}}</p>
+                        <img src="Architecture/solve/contact/phone.png" class="contact_logo" style="height: 16px; width: 14px;">
+                        <p>{{info.Contact[contact_mean].Phone}}</p>
+                        <img src="Architecture/solve/contact/emall.png" class="contact_logo" style="height: 12px; width: 17px;">
+                        <p>{{info.Contact[contact_mean].Email}}</p>
+                        <img src="Architecture/solve/contact/facebook.png" class="contact_logo" style="height: 18px; width: 18px;">
+                        <p>Facebook: <a :href="info.Contact[contact_mean].LinkFB" target="_blank">{{info.Contact[contact_mean].FB}}</a></p>
+                        <img src="Architecture/solve/contact/web.png" class="contact_logo" style="height: 22px; width: 22px;">
+                        <p>Website: <a :href="info.Contact[contact_mean].Web" target="_blank">{{info.Contact[contact_mean].Web}}</a></p>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-anchor-placement="top-center" class="col-7 test" style="left: -3.8vw;">
+                    <iframe v-if="contact_mean == 0" class="test" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15483.088801953883!2d100.75716!3d14.031513!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x92513d71fa2aabf1!2z4Lih4Li54Lil4LiZ4Li04LiY4Li0IOC4m-C4p-C4teC4k-C4siDguKvguIfguKrguIHguLjguKUg4LmA4Lie4Li34LmI4Lit4LmA4LiU4LmH4LiB4LmB4Lil4Liw4Liq4LiV4Lij4Li1!5e0!3m2!1sth!2sth!4v1603780240501!5m2!1sth!2sth"
+                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe v-if="contact_mean == 1" class="test" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15499.778348702363!2d100.549197!3d13.782214!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1e74e8b1c0b10fac!2zQWN0aW9uQWlkIFRoYWlsYW5kICjguYHguK3guYfguITguIrguLHguYjguJnguYDguK3guJQg4Lib4Lij4Liw4LmA4LiX4Lio4LmE4LiX4LiiKQ!5e0!3m2!1sth!2sth!4v1603780300411!5m2!1sth!2sth"
+                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe v-if="contact_mean == 2" class="test" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15497.802108053562!2d100.5661086!3d13.8119642!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc6ba2124b2cff05!2sAmnesty%20International%20Thailand!5e0!3m2!1sth!2sth!4v1603780329645!5m2!1sth!2sth"
+                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- หน้า Contact -->
+        <!-- รูป ผญ. 2 คนซ้ายขวาหน้า Law กับ DraftLaw -->
+        <img data-aos="fade-up-right" data-aos-anchor-placement="top-bottom" v-if="(what_page == 'Law' && what_law == 'Main') || (what_page == 'Draftlaw' && what_draft_law == 'Main' )" src="Architecture/solve/Left person.png" class="bg_ladl1">
+        <img data-aos="fade-up-left" data-aos-anchor-placement="top-bottom" v-if="(what_page == 'Law' && what_law == 'Main') || (what_page == 'Draftlaw' && what_draft_law == 'Main' )" src="Architecture/solve/Right person.png" class="bg_ladl2">
+        <img v-if="(what_page == 'Law' && what_law == 'Main') || (what_page == 'Draftlaw' && what_draft_law == 'Main' )" src="Architecture/solve/Artboard 2.png" class="bg_ladl3">
+        <!-- รูป ผญ. 2 คนซ้ายขวาหน้า Law กับ DraftLaw -->
+        <!-- ปุ่มกด Back -->
+        <button v-if="(what_page == 'Law' || what_page == 'Draftlaw') && (what_law != 'Main' || what_draft_law != 'Main' )" @click="change_law('Main'), change_draw_law('Main')" id="Btn_top">Back</button>
+        <!-- ปุ่มกด Back -->
+    </div>
+
+</body>
+<script>
+    if (navigator.appVersion.indexOf("Mac") != -1) {
+        document.documentElement.style.setProperty("--mood_tone_1", '#f5f4f5');
+    } else {
+        document.documentElement.style.setProperty("--mood_tone_1", '#f3f2f3');
+    }
+    fetch('Time_To_Bloom.json')
+        .then(response => response.json())
+        .then(json => {
+            app.info = json
+        })
+
+    let app = new Vue({
+        el: '#app',
+        data: {
+            info: {},
+            what_page: "Before_Time_To_Bloom",
+            what_law: "Main",
+            what_draft_law: "Main",
+            status_law: [false, false],
+            status_draft_law: [false, false, false, false, false],
+            contact_mean: 0,
+            time_out: "",
+            hover_0: false,
+            hover_1: false,
+            hover_2: false,
+            hover_3: false,
+            hover_4: false,
+            hover_5: false,
+            hover_6: false,
+        },
+        methods: {
+            change_page: function(page) {
+                document.documentElement.scrollTop = 0;
+                this.what_page = page;
+                this.what_law = 'Main';
+                this.what_draft_law = 'Main';
+                document.title = app.what_page;
+                if (this.what_page == "Home") {
+                    this.hidden_or_show_scroll_bar(true);
+                } else if (this.what_page == "Contact" || this.what_page == "Before_Time_To_Bloom" || this.what_page == "Time_To_Bloom") {
+                    if (this.what_page == "Time_To_Bloom") {
+                        document.title = "Time To Bloom";
+                    }
+                    this.hidden_or_show_scroll_bar(false);
+                } else {
+
+                    this.hidden_or_show_scroll_bar(false);
+                }
+            },
+            change_law: function(law) {
+                this.what_law = law;
+                if (law == "law0") {
+                    this.status_law[0] = true;
+                } else if (law == "law1") {
+                    this.status_law[1] = true;
+                }
+            },
+            change_draw_law: function(draw_law) {
+                this.what_draft_law = draw_law;
+                if (draw_law == "draw_law0") {
+                    this.status_draft_law[0] = true;
+                } else if (draw_law == "draw_law1") {
+                    this.status_draft_law[1] = true;
+                } else if (draw_law == "draw_law2") {
+                    this.status_draft_law[2] = true;
+                } else if (draw_law == "draw_law3") {
+                    this.status_draft_law[3] = true;
+                } else if (draw_law == "draw_law4") {
+                    this.status_draft_law[4] = true;
+                }
+            },
+            hidden_or_show_scroll_bar: function(boo) {
+                if (boo) {
+                    document.documentElement.style.setProperty("--overflow", 'auto');
+                } else {
+                    document.documentElement.style.setProperty("--overflow", 'hidden');
+                }
+            },
+            Blooming_flowers(status, id) {
+                var vid = document.getElementById(id);
+                if (status) {
+                    vid.play();
+                } else {
+                    vid.pause();
+                    vid.currentTime = 0;
+                }
+            },
+            change_hover(index, status) {
+                if (index == 0) {
+                    this.hover_0 = status;
+                } else if (index == 1) {
+                    this.hover_1 = status;
+                } else if (index == 2) {
+                    this.hover_2 = status;
+                } else if (index == 3) {
+                    this.hover_3 = status;
+                } else if (index == 4) {
+                    this.hover_4 = status;
+                } else if (index == 5) {
+                    this.hover_5 = status;
+                } else if (index == 6) {
+                    this.hover_6 = status;
+                }
+            }
+        }
+    })
+    var count_down = setInterval(function() {
+        if (document.getElementById("before").ended) { //เช็คว่า vdo หน้าก่อน time to bloom จบยัง
+            app.change_page("Time_To_Bloom");
+            clearInterval(count_down);
+        }
+    }, 500);
+    setTimeout(function() {
+        for (let index = 0; index < 7; index++) {
+            document.getElementById("load_gif" + index).remove();
+        }
+    }, 6000);
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+    });
+</script>
+
+</html>
